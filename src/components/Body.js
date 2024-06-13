@@ -8,6 +8,7 @@ let Body = () => {
   let [data,setData]=useState("");
   let [f,setF]=useState([])
   let s=useStatus()
+
   useEffect(()=>{
     fetchData()
   },[])
@@ -25,7 +26,6 @@ let Body = () => {
 
     
   }
-  console.log(res);
   function fun1()
   {
     let ff=res.filter((result)=>result.info.name.toLowerCase().includes(data.toLowerCase()))
